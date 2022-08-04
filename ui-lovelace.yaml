@@ -1,0 +1,36 @@
+# resources:
+# - url: /hacsfiles/button-card/button-card.js
+#   type: module
+
+title:
+  Olympus Residence - Chores
+
+  # When you regenerate, the browser cache for this file will be invalidated
+
+views:
+  - !include lovelace/home.yaml
+  - !include lovelace/lights.yaml
+  - !include lovelace/chores/chores_view.yaml
+  - !include lovelace/notifications.yaml
+  - !include lovelace/doors_windows.yaml
+  - !include lovelace/presence.yaml
+  - !include lovelace/system_monitor.yaml
+  - !include lovelace/temp_humidity.yaml
+  - !include lovelace/battery_status.yaml
+  - !include lovelace/surveilance.yaml
+  - !include lovelace/appliances.yaml
+  - !include lovelace/holiday_lights.yaml
+
+  # - !include lovelace/chores/chores.yaml
+  # - title: Example
+  #   cards:
+  #     # The markdown card will render markdown text.
+  #     - type: markdown
+  #       title: Lovelace
+  #       content: |
+  #         <ha-icon icon="mdi:home-assistant" />
+  # # - type: horizontal-stack
+  # #   cards:
+  # #     - !include
+  # #       - /config/lovelace/functions/presence.yaml
+  # #       - person: thomas

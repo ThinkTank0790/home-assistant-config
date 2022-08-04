@@ -1,0 +1,316 @@
+# lovelace_gen
+# {% set my_lights = ["light.kitchen_cabinet_lights", "light.nursery_light", "light.office_light"] %}
+title: Chores
+icon: mdi:broom
+cards:
+  # - type: entities
+  #   entities:
+  #   {% for light in my_lights %}
+  #         - {{ light }}
+  #   {% endfor %}
+
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        title: Bathrooms
+        cards:
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Bathtub
+              sensor_name: clean_bathtub
+              warning_before: 2
+              cycle_days: 14
+              icon: mdi:bathtub
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Toilets
+              sensor_name: clean_toilets
+              warning_before: 1
+              cycle_days: 7
+              icon: mdi:toilet
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Mirrors
+              sensor_name: clean_mirrors
+              warning_before: 1
+              cycle_days: 7
+              icon: mdi:mirror-rectangle
+      - type: vertical-stack
+        title: Garage
+        cards:
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Garage
+              sensor_name: clean_garage
+              warning_before: 2
+              cycle_days: 15
+              icon: mdi:garage-open
+          - !include
+            - ../templates/chores.yaml
+            - name: Oil Garage Door
+              sensor_name: oil_garage_door
+              warning_before: 1
+              cycle_days: 30
+              icon: mdi:oil
+          - !include
+            - ../templates/chores.yaml
+            - name: Check Salt Level
+              sensor_name: check_watersoftener_salt
+              warning_before: 1
+              cycle_days: 30
+              icon: mdi:water-alert
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Garbage Cans
+              sensor_name: clean_garbage_cans
+              warning_before: 2
+              cycle_days: 15
+              icon: mdi:trash-can
+
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        title: Floor
+        cards:
+          - !include
+            - ../templates/chores.yaml
+            - name: Sweep Floor
+              sensor_name: sweep_floor
+              warning_before: 0
+              cycle_days: 1
+              icon: mdi:broom
+          - !include
+            - ../templates/chores.yaml
+            - name: Wet Mop Floor
+              sensor_name: wet_mop_floor
+              warning_before: 1
+              cycle_days: 7
+              icon: mdi:water-opacity
+          - !include
+            - ../templates/chores.yaml
+            - name: Vacuum Carpets
+              sensor_name: vacuum_floor
+              warning_before: 1
+              cycle_days: 7
+              icon: mdi:vacuum
+
+      - type: vertical-stack
+        title: Outdoor
+        cards:
+          - !include
+            - ../templates/chores.yaml
+            - name: Water Plants
+              sensor_name: water_plants
+              warning_before: 0
+              cycle_days: 1
+              icon: mdi:flower
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Cobwebs
+              sensor_name: clean_cobwebs
+              warning_before: 5
+              cycle_days: 90
+              icon: mdi:spider-web
+          - !include
+            - ../templates/chores.yaml
+            - name: Car Wash
+              sensor_name: car_wash
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:car-wash
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Bikes
+              sensor_name: clean_bikes
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:bike-fast
+          - !include
+            - ../templates/chores.yaml
+            - name: Oil Wind Spinner
+              sensor_name: oil_wind_spinner
+              warning_before: 3
+              cycle_days: 15
+              icon: mdi:fan-alert
+          - !include
+            - ../templates/chores.yaml
+            - name: Feed Birds
+              sensor_name: fill_bird_seed
+              warning_before: 1
+              cycle_days: 3
+              icon: mdi:bird
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Bird Feeders
+              sensor_name: clean_bird_feeders
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:ladybug
+          - !include
+            - ../templates/chores.yaml
+            - name: Pest Control
+              sensor_name: do_pest_control
+              warning_before: 5
+              cycle_days: 90
+              icon: mdi:bug-check
+
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        title: Home
+        cards:
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Doors
+              sensor_name: clean_doors
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:door
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Windows
+              sensor_name: clean_windows
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:window-closed-variant
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Blinds
+              sensor_name: clean_blinds
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:blinds
+          - !include
+            - ../templates/chores.yaml
+            - name: Rotate King Matress
+              sensor_name: rotate_matress
+              warning_before: 5
+              cycle_days: 90
+              icon: mdi:bed-king
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Ceiling Fans
+              sensor_name: clean_ceiling_fans
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:ceiling-fan-light
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Furnitures
+              sensor_name: clean_furnitures
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:table-chair
+          - !include
+            - ../templates/chores.yaml
+            - name: Wash Bedding
+              sensor_name: wash_bedding_set
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:bed-empty
+          - !include
+            - ../templates/chores.yaml
+            - name: Wash Floor Mats
+              sensor_name: wash_floor_mats
+              warning_before: 3
+              cycle_days: 30
+              icon: mdi:rug
+          - !include
+            - ../templates/chores.yaml
+            - name: Condition Couch
+              sensor_name: apply_couch_conditioner
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:sofa
+          - !include
+            - ../templates/chores.yaml
+            - name: Wash Holy Vessels
+              sensor_name: wash_holy_vessels
+              warning_before: 2
+              cycle_days: 7
+              icon: mdi:spoon-sugar
+
+  - type: vertical-stack
+    cards:
+      - type: vertical-stack
+        title: Appliances
+        cards:
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean HVAC Drain
+              sensor_name: clean_hvac_drain
+              warning_before: 4
+              cycle_days: 30
+              icon: mdi:air-conditioner
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean HVAC Flter
+              sensor_name: change_hvac_filter
+              warning_before: 4
+              cycle_days: 60
+              icon: mdi:air-filter
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Fridge
+              sensor_name: clean_fridge
+              warning_before: 4
+              cycle_days: 30
+              icon: mdi:fridge
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Range
+              sensor_name: clean_range
+              warning_before: 2
+              cycle_days: 5
+              icon: mdi:stove
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Instant Pot
+              sensor_name: clean_instantpot
+              warning_before: 2
+              cycle_days: 7
+              icon: mdi:pot-steam-outline
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Appliances
+              sensor_name: clean_appliances
+              warning_before: 3
+              cycle_days: 7
+              icon: mdi:devices
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Dishwasher
+              sensor_name: clean_dishwasher
+              warning_before: 3
+              cycle_days: 7
+              icon: mdi:dishwasher
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Food Disposal
+              sensor_name: clean_garbage_disposal
+              warning_before: 0
+              cycle_days: 1
+              icon: mdi:blender-software
+          - !include
+            - ../templates/chores.yaml
+            - name: Clean Cabinets
+              sensor_name: clean_cabinets
+              warning_before: 5
+              cycle_days: 30
+              icon: mdi:file-cabinet
+
+      # - !include
+      #   - button_card.yaml
+      #   - entity: light.nursery_light
+  #     - !include
+  #       - lovelace/chores/button_card.yaml
+  #       - entity: light.office_light
+  #         name: LIGHT!
+
+  # Include files with arguments
+  # NB: JSON format for arguments
+  # And NO SPACE after the colons!
+  # - !include
+  #   -floorplan.yaml
+  #   - lamps: true
+  #     title: With Lamps
